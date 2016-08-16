@@ -2210,14 +2210,14 @@ void window_load_cgm(Window *window_cgm)
 #ifdef DEBUG_LEVEL
 	APP_LOG(APP_LOG_LEVEL_INFO, "Creating Delta BG Text layer");
 #endif
-	delta_layer = text_layer_create(GRect(0, 36, 143, 50));
+	delta_layer = text_layer_create(GRect(0, 20, 143, 50));
 #ifdef PBL_COLOR
 	text_layer_set_text_color(delta_layer, GColorDukeBlue);
 #else
 	text_layer_set_text_color(delta_layer, GColorBlack);
 #endif
 	text_layer_set_background_color(delta_layer, GColorClear);
-	text_layer_set_font(delta_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28));
+	text_layer_set_font(delta_layer, fonts_get_system_font(FONT_KEY_BITHAM_30_BLACK));
 
 #ifdef PBL_PLATFORM_APLITE
 	text_layer_set_text_alignment(delta_layer, GTextAlignmentRight);
@@ -2267,9 +2267,9 @@ void window_load_cgm(Window *window_cgm)
 #ifdef DEBUG_LEVEL
 	APP_LOG(APP_LOG_LEVEL_INFO, "Creating CGM Time Ago Bitmap layer");
 #endif
-	//cgmtime_layer = text_layer_create(GRect(5, 58, 40, 24));
+	//cgmtime_layer = text_layer_create(GRect(5, 48, 40, 24));
 #ifdef PBL_PLATFORM_APLITE
-	cgmtime_layer = text_layer_create(GRect(104, 58, 40, 24));
+	cgmtime_layer = text_layer_create(GRect(0, 58, 143, 50));
 #else
 	cgmtime_layer = text_layer_create(GRect(52, 58, 40, 24));
 #endif
@@ -2281,9 +2281,9 @@ void window_load_cgm(Window *window_cgm)
 	text_layer_set_text_color(cgmtime_layer, GColorBlack);
 	text_layer_set_background_color(cgmtime_layer, GColorClear);
 #endif
-	text_layer_set_font(cgmtime_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
+	text_layer_set_font(cgmtime_layer, fonts_get_system_font(FONT_KEY_BITHAM_30_BLACK));
 	//text_layer_set_text_alignment(cgmtime_layer, GTextAlignmentLeft);
-	text_layer_set_text_alignment(cgmtime_layer, GTextAlignmentCenter);
+	text_layer_set_text_alignment(cgmtime_layer, GTextAlignmentRight);
 	layer_add_child(window_layer_cgm, text_layer_get_layer(cgmtime_layer));
 
 #ifdef PBL_PLATFORM_APLITE
