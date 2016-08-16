@@ -1429,6 +1429,7 @@ static void load_bg_delta()
 #define MSGLAYER_BUFFER_SIZE 14
 #define BGDELTA_LABEL_SIZE 14
 #define BGDELTA_FORMATTED_SIZE 14
+#define BGDELTA_FORMATTED_SIZE_BIGNUM 4
 	// VARIABLES
 	// NOTE: buffers have to be static and hardcoded
 	//static char delta_label_buffer[BGDELTA_LABEL_SIZE];
@@ -1500,7 +1501,8 @@ static void load_bg_delta()
 	//APP_LOG(APP_LOG_LEVEL_DEBUG, "LOAD BG DELTA, DELTA STRING: %s", &current_bg_delta[i]);
 #endif
 	//strcat(formatted_bg_delta, delta_label_buffer);
-	strncpy(formatted_bg_delta, current_bg_delta, BGDELTA_FORMATTED_SIZE);
+	strncpy(formatted_bg_delta, "", BGDELTA_FORMATTED_SIZE); //clear buffer
+	strncpy(formatted_bg_delta, current_bg_delta, BGDELTA_FORMATTED_SIZE_BIGNUM);
 
 #ifdef DEBUG_LEVEL
 	APP_LOG(APP_LOG_LEVEL_INFO, "LOAD_BG_DELTA: All good. Setting \"%s\"", formatted_bg_delta);
