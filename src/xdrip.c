@@ -155,14 +155,14 @@ static const uint8_t SPECVALUE_SNZ_MIN = 30;
 
 // Vibration Levels; 0 = NONE; 1 = LOW; 2 = MEDIUM; 3 = HIGH
 // IF YOU DO NOT WANT A SPECIFIC VIBRATION, SET TO 0
-static const uint8_t SPECVALUE_VIBE = 2;
-static const uint8_t DOUBLEDOWN_VIBE = 3;
-static const uint8_t APPSYNC_ERR_VIBE = 1;
-static const uint8_t APPMSG_INDROP_VIBE = 1;
-static const uint8_t APPMSG_OUTFAIL_VIBE = 1;
-static const uint8_t BTOUT_VIBE = 1;
-static const uint8_t CGMOUT_VIBE = 1;
-static const uint8_t PHONEOUT_VIBE = 1;
+static const uint8_t SPECVALUE_VIBE = 0;
+static const uint8_t DOUBLEDOWN_VIBE = 0;
+static const uint8_t APPSYNC_ERR_VIBE = 0;
+static const uint8_t APPMSG_INDROP_VIBE = 0;
+static const uint8_t APPMSG_OUTFAIL_VIBE = 0;
+static const uint8_t BTOUT_VIBE = 0;
+static const uint8_t CGMOUT_VIBE = 0;
+static const uint8_t PHONEOUT_VIBE = 0;
 static const uint8_t LOWBATTERY_VIBE = 1;
 
 // Icon Cross Out & Vibrate Once Wait Times, in Minutes
