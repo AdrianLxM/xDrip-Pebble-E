@@ -163,7 +163,7 @@ static const uint8_t APPMSG_OUTFAIL_VIBE = 0;
 static const uint8_t BTOUT_VIBE = 0;
 static const uint8_t CGMOUT_VIBE = 0;
 static const uint8_t PHONEOUT_VIBE = 0;
-static const uint8_t LOWBATTERY_VIBE = 1;
+static const uint8_t LOWBATTERY_VIBE = 0;
 
 // Icon Cross Out & Vibrate Once Wait Times, in Minutes
 // RANGE 0-240
@@ -1896,7 +1896,7 @@ void inbox_received_handler_cgm(DictionaryIterator *iterator, void *context)
 #endif
 					if(data->value->uint8 > 0 || data->value->uint8 <4)
 						{
-							alert_handler_cgm(data->value->uint8);
+							//alert_handler_cgm(data->value->uint8);
 						}
 					break;
 
@@ -2271,7 +2271,7 @@ void window_load_cgm(Window *window_cgm)
 #endif
 	//cgmtime_layer = text_layer_create(GRect(5, 48, 40, 24));
 #ifdef PBL_PLATFORM_APLITE
-	cgmtime_layer = text_layer_create(GRect(0, 58, 143, 50));
+	cgmtime_layer = text_layer_create(GRect(0, 56, 143, 50));
 #else
 	cgmtime_layer = text_layer_create(GRect(52, 58, 40, 24));
 #endif
