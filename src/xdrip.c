@@ -532,12 +532,11 @@ static void alert_handler_cgm(uint8_t alertValue)
 	// Vibe pattern: ON, OFF, ON, OFF; ON for 500ms, OFF for 100ms, ON for 100ms;
 
 	// CURRENT PATTERNS
-	const uint32_t highalert_fast[] = { 300,100,50,100,300,100,50,100,300,100,50,100,300,100,50,100,300,100,50,100,300,100,50,100,300,100,50,100,300,100,50,100,300 };
+	const uint32_t highalert_fast[] = { 75,50,50,50,75,50,50,50,75,50,50,50,75,50,50,50,75,50,50,50,75,50,50,50,75 };
 	const uint32_t medalert_long[] = { 500,100,100,100,500,100,100,100,500,100,100,100,500,100,100,100,500 };
 	const uint32_t lowalert_beebuzz[] = { 75,50,50,50,75,50,50,50,75,50,50,50,75,50,50,50,75,50,50,50,75,50,50,50,75 };
-
 	// PATTERN DURATION
-	const uint8_t HIGHALERT_FAST_STRONG = 33;
+	const uint8_t HIGHALERT_FAST_STRONG = 64;
 	const uint8_t HIGHALERT_FAST_SHORT = (33/2);
 	const uint8_t MEDALERT_LONG_STRONG = 17;
 	const uint8_t MEDALERT_LONG_SHORT = (17/2);
@@ -1896,7 +1895,7 @@ void inbox_received_handler_cgm(DictionaryIterator *iterator, void *context)
 #endif
 					if(data->value->uint8 > 0 || data->value->uint8 <4)
 						{
-							//alert_handler_cgm(data->value->uint8);
+							alert_handler_cgm(data->value->uint8);
 						}
 					break;
 
